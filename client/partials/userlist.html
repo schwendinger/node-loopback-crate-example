@@ -1,9 +1,10 @@
-<p>Number of Users in our db: <span>{{persons.count}}</span></p>
+<p>Number of Users in our db: <span>{{personsCount.count}}</span></p>
 
 Users:
 <ul>
   <li ng-repeat="person in persons">
     {{person.username}} - {{person.email}}
+    <button ng-click="deletePerson(person)">delete {{person.id}}</button>
   </li>
 </ul>
 

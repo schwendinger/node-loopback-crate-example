@@ -1,5 +1,9 @@
-<p>This is the partial for view 2.</p>
-<p>
-  Showing of 'interpolate' filter:
-  {{ 'Current version is v%VERSION%.' | interpolate }}
-</p>
+<div ng-controller="NewuserCtrl">
+  <form novalidate="novalidate" class="simple-form" id="formAddUser">
+    <input id="inputUserName" ng-model="user.username" type="text" placeholder="Username" name="username" />
+    <input id="inputUserEmail" ng-model="user.email" type="text" placeholder="user email" name="useremail" />
+    <button ng-click="save(user)">save</button>
+  </form>
+  <pre>form = {{user | json}}</pre>
+  <pre>master = {{master | json}}</pre>
+</div>
