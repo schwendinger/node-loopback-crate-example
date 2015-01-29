@@ -26,10 +26,6 @@
     "dataSource": "db",
     "public": false
   },
-  "user": {
-    "dataSource": "db",
-    "public": true
-  },
   "person": {
     "dataSource": "crateDs",
     "public": true
