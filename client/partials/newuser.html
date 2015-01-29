@@ -3,6 +3,7 @@
     <input id="inputUserName" ng-model="user.username" type="text" placeholder="Username" name="username" />
     <input id="inputUserEmail" ng-model="user.email" type="text" placeholder="user email" name="useremail" />
     <button ng-click="save(user)">save</button>
+    <input type="button" ng-click="reset()" value="Reset" />
   </form>
   <pre>form = {{user | json}}</pre>
   <pre>master = {{master | json}}</pre>
