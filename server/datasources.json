@@ -1,0 +1,12 @@
+{
+    "db": {
+        "name": "db",
+        "connector": "memory"
+    },
+    "crateDs": {
+        "name": "crateDs",
+        "connector": "crate",
+        "host": "localhost",
+        "port": 4200
+    }
+}
