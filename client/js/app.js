@@ -17,5 +17,8 @@ angular.module('myApp', [
                             {templateUrl:
                              'partials/newuser.html',
                              controller: 'NewuserCtrl'});
-        $routeProvider.otherwise({redirectTo: '/userlist'});
+        $routeProvider.when('/hello',
+                            {templateUrl: 'partials/hello.html',
+                             controller: 'HelloCtrl' });
+        $routeProvider.otherwise({redirectTo: '/hello'});
     }]);

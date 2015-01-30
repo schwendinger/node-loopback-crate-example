@@ -35,4 +35,28 @@ angular.module('myApp.controllers', [])
             $scope.user = angular.copy($scope.master);
         };
         $scope.reset();
-  }]);
+    }])
+  .controller('HelloCtrl', [function($scope){
+
+  }])
+  .controller('NavbarCtrl', function ($scope, $location) {
+    $scope.menu = [
+    {
+      'title': 'Hello',
+      'link': '#/hello'
+    },
+    {
+      'title': 'Userlist',
+      'link': '#/userlist'
+    },
+    {
+      'title': 'New User',
+      'link': '#/newuser'
+    }];
+
+    $scope.isCollapsed = true;
+
+    $scope.isActive = function(route) {
+      return route === $location.path();
+    };
+  });
