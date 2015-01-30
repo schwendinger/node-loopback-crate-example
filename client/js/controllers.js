@@ -28,11 +28,10 @@ angular.module('myApp.controllers', [])
         $scope.save = function(user) {
             $scope.master = angular.copy(user);
             $scope.person = Person.create(user);
-            //$scope.person.$save();
             $scope.reset();
         };
         $scope.reset = function() {
-            $scope.user = angular.copy($scope.master);
+            $scope.user = {username:'', email:''}; //angular.copy($scope.master);
         };
         $scope.reset();
     }])

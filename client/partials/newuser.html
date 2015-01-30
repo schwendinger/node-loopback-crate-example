@@ -1,10 +1,29 @@
-<div ng-controller="NewuserCtrl">
-  <form novalidate="novalidate" class="simple-form" id="formAddUser">
-    <input id="inputUserName" ng-model="user.username" type="text" placeholder="Username" name="username" />
-    <input id="inputUserEmail" ng-model="user.email" type="text" placeholder="user email" name="useremail" />
-    <button ng-click="save(user)">save</button>
-    <input type="button" ng-click="reset()" value="Reset" />
-  </form>
-  <pre>form = {{user | json}}</pre>
-  <pre>master = {{master | json}}</pre>
+
+<div class="container nice-color">
+  <div class="row">
+    <div class="col-lg-12">
+      <h1>Add new user</h1>
+      <form novalidate="novalidate" id="formAddUser" class="form-inline">
+        <div class="form-group">
+          <label for="inputUsername" class="sr-only">username</label>
+          <input id="inputUserName" ng-model="user.username" type="text" placeholder="Enter username" name="username" class="form-control"/>
+        </div>
+        <div class="form-group">
+          <label for="inputUseremail" class="sr-only">useremail</label>
+          <input id="inputUserEmail" type="email" ng-model="user.email" placeholder="Enter email" name="useremail" class="form-control"/>
+        </div>
+        <button id="btnSubmit" ng-click="save(user)" class="btn btn-default">submit</button>
+        <input type="button" ng-click="reset()" value="Reset" class="btn btn-default" />
+      </form>
+    </div>
+  </div>
+  <div class="row">
+    <br /><br />
+    Debugging: <br/><br />
+    <pre>form = {{user | json}}</pre>
+    <pre>master = {{master | json}}</pre>
+  </div>
 </div>
+
+
+

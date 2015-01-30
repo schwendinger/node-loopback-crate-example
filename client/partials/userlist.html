@@ -1,11 +1,37 @@
-<p>Number of Users in our db: <span>{{personsCount.count}}</span></p>
 
-Users:
-<ul>
-  <li ng-repeat="person in persons">
-    {{person.username}} - {{person.email}}
-    <button ng-click="deletePerson(person)">delete</button>
-  </li>
-</ul>
-
+<div class="container nice-color">
+  <div class="row">
+    <div class="col-lg-12">
+      <h1>User List</h1>
+      <br/>
+      <a role="button" href="#/newuser" class="btn-primary btn-lg">create new user</a>
+      <br/><br/><br/>
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Delete</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="person in persons">
+            <td>
+              <a href="mailto:{{person.email}}">{{person.username}}</a>
+            </td>
+            <td>
+              <span>{{person.email}}</span>
+            </td>
+            <td>
+              <a role="button" ng-click="deletePerson(person)" class="btn btn-danger btn-sm">delete</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="row">
+    Number of Users in our db: <span>{{personsCount.count}}</span>
+  </div>
+</div>
 
