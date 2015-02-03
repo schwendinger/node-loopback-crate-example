@@ -4,7 +4,7 @@
 
 angular.module('myApp.controllers', [])
     .controller('UserlistCtrl', ['$scope', 'Person', function($scope, Person) {
-        $scope.personsCount = Person.count(); // add loopback model
+        $scope.personsCount = Person.count();
         $scope.persons = Person.find();
         $scope.deletePerson = function(person){
             console.log("deletePerson", person);
@@ -19,7 +19,7 @@ angular.module('myApp.controllers', [])
                      }
                     console.log('deleted ',id, person, $scope);
                 });
-        }
+        };
   }])
     .controller('NewuserCtrl', ['$scope', 'Person', function($scope, Person) {
         $scope.username = '';
@@ -31,7 +31,7 @@ angular.module('myApp.controllers', [])
             $scope.reset();
         };
         $scope.reset = function() {
-            $scope.user = {username:'', email:''}; //angular.copy($scope.master);
+            $scope.user = {username:'', email:''};
         };
         $scope.reset();
     }])
