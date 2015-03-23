@@ -22,10 +22,6 @@ How to install crate:
 bash -c "$(curl -L try.crate.io)"
 ```
 
- - you need to install loopback-connector-crate in a silbing directory
-   of your project. https://github.com/lovelysystems/loopback-connector-crate
-   (there is no npm module available yet)
-
 ### install the project:
 
 clone this repository and then run:

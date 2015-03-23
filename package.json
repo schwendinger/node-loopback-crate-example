@@ -3,8 +3,7 @@
     "version": "1.0.0",
     "main": "server/server.js",
     "scripts": {
-        "pretest": "jshint .",
-        "preinstall": "npm install ../loopback-connector-crate"
+        "pretest": "jshint ."
     },
     "dependencies": {
         "compression": "^1.0.3",
@@ -14,7 +13,7 @@
         "loopback-boot": "^2.4.0",
         "loopback-datasource-juggler": "^2.7.0",
         "serve-favicon": "^2.0.1",
-        "loopback-connector-crate": "file:../loopback-connector-crate"
+        "loopback-connector-crateio": "latest"
     },
     "optionalDependencies": {
         "loopback-explorer": "^1.1.0"

@@ -5,7 +5,7 @@
     },
     "crateDs": {
         "name": "crateDs",
-        "connector": "crate",
+        "connector": "crateio",
         "host": "localhost",
         "port": 4200
     }
