@@ -17,10 +17,10 @@
         <tbody>
           <tr ng-repeat="person in persons">
             <td>
-              <a href="mailto:{{person.email}}">{{person.username}}</a>
+              <a href="#/user/{{person.id}}">{{person.username}}</a>
             </td>
             <td>
-              <span>{{person.email}}</span>
+              <span><a href="mailto:{{person.email}}">{{person.email}}</a></span>
             </td>
             <td>
               <a role="button" ng-click="deletePerson(person)" class="btn btn-danger btn-sm">delete</a>

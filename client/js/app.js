@@ -20,5 +20,8 @@ angular.module('myApp', [
         $routeProvider.when('/hello',
                             {templateUrl: 'partials/hello.html',
                              controller: 'HelloCtrl' });
+        $routeProvider.when('/user/:id',
+                            {templateUrl: 'partials/user.html',
+                            controller:'UserCtrl'});
         $routeProvider.otherwise({redirectTo: '/hello'});
     }]);

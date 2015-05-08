@@ -21,7 +21,12 @@ angular.module('myApp.controllers', [])
                 });
         };
   }])
-    .controller('NewuserCtrl', ['$scope', 'Person', function($scope, Person) {
+  
+   .controller('UserCtrl', ['$scope', '$routeParams', 'Person', function($scope, $routeParams, Person){
+    	$scope.person = Person.findById($routeParams);             
+   }])
+  
+      .controller('NewuserCtrl', ['$scope', 'Person', function($scope, Person) {
         $scope.username = '';
         $scope.email = '';
         $scope.master = {};
